@@ -117,8 +117,8 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButtonListPortForwarding,
             this.toolStripSeparator1,
+            this.toolStripButtonListPortForwarding,
             this.toolStripButtonAddPortForward,
             this.toolStripButtonDeletePortForward});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);

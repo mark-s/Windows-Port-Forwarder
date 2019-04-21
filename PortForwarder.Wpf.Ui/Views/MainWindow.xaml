@@ -1,0 +1,67 @@
+﻿<Window
+    x:Class="PortForwarder.Wpf.Ui.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:prism="http://prismlibrary.com/"
+    Title="Ocean Airdrop - Port Forwarder (WPF)"
+    Width="710"
+    Height="350"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    mc:Ignorable="d">
+
+    <DockPanel LastChildFill="True">
+
+        <ToolBarTray VerticalAlignment="Top" DockPanel.Dock="Top">
+            <ToolBar>
+                <Button Width="150" Command="{Binding ListAllCommand}">
+                    List Port Forwarding
+                </Button>
+                <Button Width="150" Command="{Binding AddCommand}">Add Port Forwardings</Button>
+                <Button
+                    Width="150"
+                    Command="{Binding DeleteCommand}"
+                    CommandParameter="{Binding PfSelected}">
+                    Delete Port Forwarding
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
+
+        <StatusBar
+            Height="25"
+            VerticalAlignment="Bottom"
+            DockPanel.Dock="Bottom">
+            <TextBlock Text="{Binding StatusText}" />
+        </StatusBar>
+
+        <Border
+            BorderBrush="DarkGray"
+            BorderThickness="0,1,0,0"
+            DockPanel.Dock="Bottom">
+            <StackPanel Orientation="Horizontal">
+                <Label>Command Text:</Label>
+                <TextBlock Text="{Binding CommandText}" />
+            </StackPanel>
+        </Border>
+
+        <DockPanel LastChildFill="True">
+
+            <Border
+                BorderBrush="DarkGray"
+                BorderThickness="0,0,1,0"
+                DockPanel.Dock="Left">
+
+                <ListView
+                    Width="200"
+                    ItemsSource="{Binding PortForwardConfigs}"
+                    SelectedItem="{Binding PfSelected}" />
+            </Border>
+
+            <TextBlock Padding="5" Text="{Binding OutputText}" />
+
+        </DockPanel>
+
+    </DockPanel>
+
+</Window>

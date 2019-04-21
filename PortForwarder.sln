@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortForwarder", "PortForwarder\PortForwarder.csproj", "{873DD665-1F30-4928-8C91-D4C0AFFEA968}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortForwarder.Shared", "PortForwarder.Shared\PortForwarder.Shared.csproj", "{7A4F478C-040C-4E1A-85D9-8DCF3E84372A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortForwarder.Wpf.Ui", "PortForwarder.Wpf.Ui\PortForwarder.Wpf.Ui.csproj", "{8909EEC8-FA2C-4D85-938F-EC94B39B856D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +19,19 @@ Global
 		{873DD665-1F30-4928-8C91-D4C0AFFEA968}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{873DD665-1F30-4928-8C91-D4C0AFFEA968}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{873DD665-1F30-4928-8C91-D4C0AFFEA968}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A4F478C-040C-4E1A-85D9-8DCF3E84372A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A4F478C-040C-4E1A-85D9-8DCF3E84372A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A4F478C-040C-4E1A-85D9-8DCF3E84372A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A4F478C-040C-4E1A-85D9-8DCF3E84372A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8909EEC8-FA2C-4D85-938F-EC94B39B856D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8909EEC8-FA2C-4D85-938F-EC94B39B856D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8909EEC8-FA2C-4D85-938F-EC94B39B856D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8909EEC8-FA2C-4D85-938F-EC94B39B856D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EAA5AE31-B4E2-4D5B-B5A0-BD9F01459365}
 	EndGlobalSection
 EndGlobal

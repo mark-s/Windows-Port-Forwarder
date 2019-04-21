@@ -1,0 +1,38 @@
+﻿<Window
+    x:Class="PortForwarder.Wpf.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:PortForwarder.Wpf"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Ocean Airdrop - Port Forwarder (WPF)"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <DockPanel LastChildFill="True">
+        <ToolBarTray VerticalAlignment="Top" DockPanel.Dock="Top">
+            <ToolBar>
+                <Button Width="150">List Port Forwarding</Button>
+                <Button Width="150">Add Port Forwarder</Button>
+                <Button Width="150">Delete Port Forwarder</Button>
+            </ToolBar>
+        </ToolBarTray>
+
+
+        <StatusBar
+            Height="30"
+            VerticalAlignment="Bottom"
+            DockPanel.Dock="Bottom" />
+
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+            <Label>Command Text:</Label>
+            <TextBlock />
+        </StackPanel>
+
+
+
+        <TextBlock />
+
+
+    </DockPanel>
+</Window>
