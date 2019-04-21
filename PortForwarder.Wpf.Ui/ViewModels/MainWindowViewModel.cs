@@ -68,6 +68,18 @@ namespace PortForwarder.Wpf.Ui.ViewModels
                 new PortForwardConfig("TEST",
                     new SourceConfig(123, IPAddress.Loopback.ToString()),
                     new DestinationConfig(456, IPAddress.Loopback.ToString())));
+            PortForwardConfigs.Add(
+                new PortForwardConfig("TEST",
+                    new SourceConfig(123, IPAddress.Loopback.ToString()),
+                    new DestinationConfig(456, IPAddress.Loopback.ToString())));
+            PortForwardConfigs.Add(
+                new PortForwardConfig("TEST",
+                    new SourceConfig(123, IPAddress.Loopback.ToString()),
+                    new DestinationConfig(456, IPAddress.Loopback.ToString())));
+            PortForwardConfigs.Add(
+                new PortForwardConfig("TEST",
+                    new SourceConfig(123, IPAddress.Loopback.ToString()),
+                    new DestinationConfig(456, IPAddress.Loopback.ToString())));
 
             OutputText ="TEST";
             StatusText = "Ready...";

@@ -113,6 +113,14 @@ namespace PortForwarder
 
         private async Task ListPortForwardRules()
         {
+
+            //netsh interface portproxy add v4tov4 listenport=123 listenaddress=127.0.0.1 connectport=8080 connectaddress=127.0.0.1
+            //Listen on ipv4: Connect to ipv4:
+
+            //Address Port        Address Port
+            //--------------------------------------------------
+            //    127.0.0.1       123         127.0.0.1       8080
+
             try
             {
                 _commandText = "netsh interface portproxy show all";
