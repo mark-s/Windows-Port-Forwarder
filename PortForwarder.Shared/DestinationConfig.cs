@@ -12,5 +12,8 @@ namespace PortForwarder.Shared
             DestinationPort = destinationPort;
             DestinationIP = IPAddress.TryParse(destinationIP, out var ipAddress) ? ipAddress : IPAddress.None;
         }
+
+        public override string ToString()
+            => $"{DestinationIP}:{DestinationPort}";
     }
 }

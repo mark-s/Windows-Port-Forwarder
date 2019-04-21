@@ -32,14 +32,12 @@ namespace PortForwarder.Wpf.Ui.ViewModels
             set => SetProperty(ref _statusText, value);
         }
 
-        private ObservableCollection<PortForwardConfig> _portForwardConfigs;
+        private ObservableCollection<PortForwardConfig> _portForwardConfigs = new ObservableCollection<PortForwardConfig>();
         public ObservableCollection<PortForwardConfig> PortForwardConfigs
         {
             get => _portForwardConfigs;
             set => SetProperty(ref _portForwardConfigs, value);
         }
-
-
 
         private PortForwardConfig _pfSelected;
         public PortForwardConfig PfSelected
@@ -56,10 +54,9 @@ namespace PortForwarder.Wpf.Ui.ViewModels
         public DelegateCommand ListAllCommand 
             => _listAllCommand ?? (_listAllCommand = new DelegateCommand(ListAllPortForwardingRules));
 
-
         private DelegateCommand<PortForwardConfig> _deletePortForwardingCommand;
-        public DelegateCommand<PortForwardConfig> DeleteCommand =>
-            _deletePortForwardingCommand ?? (_deletePortForwardingCommand = new DelegateCommand<PortForwardConfig>(ExecuteDeleteCommand));
+        public DelegateCommand<PortForwardConfig> DeleteCommand 
+            => _deletePortForwardingCommand ?? (_deletePortForwardingCommand = new DelegateCommand<PortForwardConfig>(ExecuteDeleteCommand));
 
 
         
@@ -67,9 +64,8 @@ namespace PortForwarder.Wpf.Ui.ViewModels
 
         public MainWindowViewModel()
         {
-            PortForwardConfigs = new ObservableCollection<PortForwardConfig>();
             PortForwardConfigs.Add(
-                new PortForwardConfig(
+                new PortForwardConfig("TEST",
                     new SourceConfig(123, IPAddress.Loopback.ToString()),
                     new DestinationConfig(456, IPAddress.Loopback.ToString())));
 

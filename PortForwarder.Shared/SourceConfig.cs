@@ -13,5 +13,8 @@ namespace PortForwarder.Shared
             SourcePort = sourcePort;
             SourceIP = IPAddress.TryParse(sourceIP, out var ipAddress) ? ipAddress : IPAddress.None;
         }
+
+        public override string ToString()
+            => $"{SourceIP}:{SourcePort}";
     }
 }

@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prism="http://prismlibrary.com/"
+    xmlns:shared="clr-namespace:PortForwarder.Shared;assembly=PortForwarder.Shared"
     Title="Ocean Airdrop - Port Forwarder (WPF)"
     Width="710"
     Height="350"
@@ -53,9 +54,32 @@
                 DockPanel.Dock="Left">
 
                 <ListView
-                    Width="200"
+                    MinWidth="200"
                     ItemsSource="{Binding PortForwardConfigs}"
-                    SelectedItem="{Binding PfSelected}" />
+                    SelectedItem="{Binding PfSelected}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate DataType="shared:PortForwardConfig">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock
+                                    FontSize="14"
+                                    FontWeight="Bold"
+                                    Text="{Binding Name}" />
+                                <TextBlock Padding="20,0,0,0">
+                                    <Run Text="Source:" />
+                                    <Run Text="{Binding Source.SourceIP, Mode=OneWay}" />
+                                    <Run Text=":" />
+                                    <Run Text="{Binding Source.SourcePort, Mode=OneWay}" />
+                                </TextBlock>
+                                <TextBlock Padding="20,0,0,0">
+                                    <Run Text="Destination:" />
+                                    <Run Text="{Binding Destination.DestinationIP, Mode=OneWay}" />
+                                    <Run Text=":" />
+                                    <Run Text="{Binding Destination.DestinationPort, Mode=OneWay}" />
+                                </TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </Border>
 
             <TextBlock Padding="5" Text="{Binding OutputText}" />
