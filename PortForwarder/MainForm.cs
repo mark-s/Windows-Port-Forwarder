@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Security.Principal;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PortForwarder.Shared;
 
 namespace PortForwarder
 {
@@ -114,12 +115,6 @@ namespace PortForwarder
         private async Task ListPortForwardRules()
         {
 
-            //netsh interface portproxy add v4tov4 listenport=123 listenaddress=127.0.0.1 connectport=8080 connectaddress=127.0.0.1
-            //Listen on ipv4: Connect to ipv4:
-
-            //Address Port        Address Port
-            //--------------------------------------------------
-            //    127.0.0.1       123         127.0.0.1       8080
 
             try
             {
@@ -145,7 +140,7 @@ namespace PortForwarder
 
                 if (string.IsNullOrEmpty(output))
                     output = "No portforwarding setup!";
-
+                
                 UpdateOutput(output);
 
                 UpdateStatus("Ready...");
